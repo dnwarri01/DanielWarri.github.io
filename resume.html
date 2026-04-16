@@ -7,51 +7,48 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-      body {
-        background-color: #0b1e33;
-      }
-
       .resume-wrap { max-width: 860px; margin: 0 auto; padding: 0 1rem 3rem; }
 
       .resume-hero { background: #0f2d4a; border-radius: 10px; padding: 2.5rem 2rem; text-align: center; margin-bottom: 2.5rem; }
-      .resume-hero h1 { font-size: 2.2rem; color: #ffffff; margin-bottom: 0.4rem; font-weight: 700; }
-      .resume-hero .subtitle { color: #7eb8f7; font-size: 1rem; margin-bottom: 1.2rem; letter-spacing: .05em; }
-      .resume-hero .contact-bar { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.8rem; font-size: 0.85rem; color: #c8dff5; margin-bottom: 1.2rem; }
-      .resume-hero .contact-bar a { color: #7eb8f7; text-decoration: underline; }
+      .resume-hero h1 { font-size: 2.2rem; color: #ffffff !important; margin-bottom: 0.4rem; font-weight: 700; }
+      .resume-hero .subtitle { color: #7eb8f7 !important; font-size: 1rem; margin-bottom: 1.2rem; }
+      .resume-hero .contact-bar { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.8rem; font-size: 0.85rem; color: #c8dff5 !important; margin-bottom: 1.2rem; }
+      .resume-hero .contact-bar a { color: #7eb8f7 !important; text-decoration: underline; }
       .awards { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem; }
-      .award-badge { background: rgba(255,215,0,0.18); border: 1px solid rgba(255,215,0,0.4); border-radius: 20px; padding: 4px 14px; font-size: 0.8rem; color: #ffd700; font-weight: 600; }
+      .award-badge { background: rgba(255,215,0,0.18); border: 1px solid rgba(255,215,0,0.4); border-radius: 20px; padding: 4px 14px; font-size: 0.8rem; color: #ffd700 !important; font-weight: 600; }
 
       .resume-section { margin-bottom: 2.5rem; }
-      .resume-section .sec-heading { font-size: 0.78rem; font-weight: 700; letter-spacing: .14em; color: #38bdf8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.5rem; margin-bottom: 1.4rem; }
+      .sec-heading { font-size: 0.78rem !important; font-weight: 700 !important; letter-spacing: .14em; color: #1a5276 !important; text-transform: uppercase; border-bottom: 2px solid #1a5276; padding-bottom: 0.5rem; margin-bottom: 1.4rem; }
 
-      .resume-section p { font-size: 0.95rem; color: #f1f5f9; line-height: 1.75; }
+      .resume-section p,
+      .resume-section li { font-size: 0.95rem !important; color: #111111 !important; line-height: 1.75; }
 
-      .edu-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-left: 4px solid #44bb88; border-radius: 8px; padding: 1.1rem 1.3rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; }
-      .edu-card h3 { font-size: 1.05rem; color: #ffffff; margin-bottom: 5px; font-weight: 600; }
-      .edu-card p { font-size: 0.88rem; color: #e2e8f0; margin: 0; }
+      .edu-card { background: #f0f8f4; border: 1px solid #c0ddd0; border-left: 4px solid #1a8a5a; border-radius: 8px; padding: 1.1rem 1.3rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; }
+      .edu-card h3 { font-size: 1.05rem !important; color: #111111 !important; margin-bottom: 5px; font-weight: 700; }
+      .edu-card p { font-size: 0.88rem !important; color: #333333 !important; margin: 0; }
       .edu-badges { display: flex; flex-direction: column; gap: 5px; align-items: flex-end; }
-      .edu-badge { background: rgba(255,215,0,0.15); border: 1px solid rgba(255,215,0,0.3); border-radius: 12px; padding: 3px 12px; font-size: 0.75rem; color: #ffd700; font-weight: 600; }
+      .edu-badge { background: #fff8dc; border: 1px solid #e6c200; border-radius: 12px; padding: 3px 12px; font-size: 0.75rem; color: #7a6000 !important; font-weight: 700; }
 
-      .exp-item { margin-bottom: 1.8rem; padding-left: 1.1rem; border-left: 4px solid #4488cc; }
-      .exp-item h3 { font-size: 1rem; color: #ffffff; margin-bottom: 3px; font-weight: 600; }
-      .exp-item .meta { font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.8rem; }
+      .exp-item { margin-bottom: 1.8rem; padding-left: 1.1rem; border-left: 4px solid #1a5276; }
+      .exp-item h3 { font-size: 1rem !important; color: #111111 !important; margin-bottom: 3px; font-weight: 700; }
+      .exp-item .meta { font-size: 0.82rem !important; color: #444444 !important; margin-bottom: 0.8rem; }
       .exp-item ul { padding-left: 1.2rem; margin: 0; }
-      .exp-item ul li { font-size: 0.92rem; color: #f8fafc; margin-bottom: 0.45rem; line-height: 1.65; }
+      .exp-item ul li { font-size: 0.92rem !important; color: #111111 !important; margin-bottom: 0.45rem; line-height: 1.65; }
 
       .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-      .skill-box { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem 1.1rem; }
-      .skill-box h4 { font-size: 0.82rem; color: #7eb8f7; margin-bottom: 0.7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+      .skill-box { background: #f4f8fc; border: 1px solid #c5d8ea; border-radius: 8px; padding: 1rem 1.1rem; }
+      .skill-box h4 { font-size: 0.82rem !important; color: #1a3a5c !important; margin-bottom: 0.7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
       .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-      .skill-tag { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 3px 11px; font-size: 0.78rem; color: #f8fafc; }
+      .skill-tag { background: #ffffff; border: 1px solid #aac4da; border-radius: 12px; padding: 3px 11px; font-size: 0.78rem; color: #1a3a5c !important; font-weight: 500; }
 
       .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-      .cert-item { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.85rem 1rem; display: flex; align-items: flex-start; gap: 0.7rem; }
-      .cert-dot { width: 9px; height: 9px; border-radius: 50%; background: #4488cc; flex-shrink: 0; margin-top: 4px; }
-      .cert-name { font-size: 0.88rem; color: #f1f5f9; line-height: 1.45; font-weight: 500; }
-      .cert-inprog { display: inline-block; font-size: 0.72rem; background: rgba(255,180,0,0.18); color: #ffcc55; border: 1px solid rgba(255,180,0,0.3); border-radius: 8px; padding: 1px 8px; margin-top: 4px; font-weight: 600; }
+      .cert-item { background: #f4f8fc; border: 1px solid #c5d8ea; border-radius: 8px; padding: 0.85rem 1rem; display: flex; align-items: flex-start; gap: 0.7rem; }
+      .cert-dot { width: 9px; height: 9px; border-radius: 50%; background: #1a5276; flex-shrink: 0; margin-top: 4px; }
+      .cert-name { font-size: 0.88rem !important; color: #111111 !important; line-height: 1.45; font-weight: 600; }
+      .cert-inprog { display: inline-block; font-size: 0.72rem; background: #fff3cd; color: #7a5000 !important; border: 1px solid #e6c200; border-radius: 8px; padding: 1px 8px; margin-top: 4px; font-weight: 700; }
 
       .competency-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
-      .comp-tag { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 6px; font-size: 0.82rem; padding: 5px 13px; color: #f8fafc; }
+      .comp-tag { background: #f0f4f8; border: 1px solid #b0c4d8; border-radius: 6px; font-size: 0.82rem; padding: 5px 13px; color: #1a3a5c !important; font-weight: 500; }
 
       @media (max-width: 600px) {
         .skills-grid, .cert-grid { grid-template-columns: 1fr; }
@@ -84,7 +81,7 @@
         <article class="post featured" style="padding:0; background:none; border:none; box-shadow:none;">
           <div class="resume-wrap">
 
-            <!-- ── Hero ── -->
+            <!-- Hero -->
             <div class="resume-hero">
               <h1>Daniel Nicholas Warri</h1>
               <p class="subtitle">Software Engineer &amp; IT Project Coordinator</p>
@@ -104,20 +101,20 @@
               </div>
             </div>
 
-            <!-- ── Career Objective ── -->
+            <!-- Career Objective -->
             <div class="resume-section">
               <div class="sec-heading">Career Objective</div>
               <p>Driven and detail-oriented Computer Science graduate with hands-on experience in systems engineering, web development, cybersecurity, project management, and IT support. Eager to apply technical expertise and analytical mindset to help an innovative organisation build scalable solutions, strengthen system performance, and advance cloud and automation initiatives while continuing to grow as an IT professional.</p>
             </div>
 
-            <!-- ── Education ── -->
+            <!-- Education -->
             <div class="resume-section">
               <div class="sec-heading">Education</div>
               <div class="edu-card">
                 <div>
                   <h3>Campbellsville University</h3>
                   <p>Bachelor of Science, Computer Science &nbsp;|&nbsp; Minor: Engineering</p>
-                  <p style="margin-top:5px; font-size:0.8rem; color:#cbd5e1;">Campbellsville, Kentucky</p>
+                  <p style="margin-top:5px; font-size:0.8rem; color:#555555;">Campbellsville, Kentucky</p>
                 </div>
                 <div class="edu-badges">
                   <span class="edu-badge">GPA 4.0</span>
@@ -126,7 +123,7 @@
               </div>
             </div>
 
-            <!-- ── Experience ── -->
+            <!-- Experience -->
             <div class="resume-section">
               <div class="sec-heading">Experience</div>
 
@@ -163,7 +160,7 @@
               </div>
             </div>
 
-            <!-- ── Technical Skills ── -->
+            <!-- Technical Skills -->
             <div class="resume-section">
               <div class="sec-heading">Technical Skills</div>
               <div class="skills-grid">
@@ -213,7 +210,7 @@
               </div>
             </div>
 
-            <!-- ── Certifications ── -->
+            <!-- Certifications -->
             <div class="resume-section">
               <div class="sec-heading">Certifications</div>
               <div class="cert-grid">
@@ -247,7 +244,7 @@
               </div>
             </div>
 
-            <!-- ── Core Competencies ── -->
+            <!-- Core Competencies -->
             <div class="resume-section">
               <div class="sec-heading">Core Competencies</div>
               <div class="competency-wrap">
@@ -277,7 +274,6 @@
         </article>
       </div>
 
-      <!-- ── Footer ── -->
       <footer id="footer">
         <section class="split contact">
           <section class="alt">
