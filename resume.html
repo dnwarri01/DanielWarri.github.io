@@ -7,38 +7,58 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-      .resume-hero { background: #1a1a2e; padding: 3rem 2rem; text-align: center; margin-bottom: 2rem; }
-      .resume-hero h1 { font-size: 2.5rem; color: #ffffff; margin-bottom: 0.5rem; }
-      .resume-hero p { color: #8899bb; font-size: 1.1rem; margin-bottom: 1rem; }
-      .resume-hero .contact-bar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #aabbcc; }
-      .resume-hero .contact-bar a { color: #7eb8f7; }
-      .awards { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
-      .award-badge { background: rgba(255,215,0,0.15); border: 1px solid rgba(255,215,0,0.3); border-radius: 20px; padding: 4px 14px; font-size: 0.8rem; color: #ffd700; }
+      body {
+        background-color: #0b1e33;
+      }
+
+      .resume-wrap { max-width: 860px; margin: 0 auto; padding: 0 1rem 3rem; }
+
+      .resume-hero { background: #0f2d4a; border-radius: 10px; padding: 2.5rem 2rem; text-align: center; margin-bottom: 2.5rem; }
+      .resume-hero h1 { font-size: 2.2rem; color: #ffffff; margin-bottom: 0.4rem; font-weight: 700; }
+      .resume-hero .subtitle { color: #7eb8f7; font-size: 1rem; margin-bottom: 1.2rem; letter-spacing: .05em; }
+      .resume-hero .contact-bar { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.8rem; font-size: 0.85rem; color: #c8dff5; margin-bottom: 1.2rem; }
+      .resume-hero .contact-bar a { color: #7eb8f7; text-decoration: underline; }
+      .awards { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem; }
+      .award-badge { background: rgba(255,215,0,0.18); border: 1px solid rgba(255,215,0,0.4); border-radius: 20px; padding: 4px 14px; font-size: 0.8rem; color: #ffd700; font-weight: 600; }
+
       .resume-section { margin-bottom: 2.5rem; }
-      .resume-section h2 { font-size: 0.85rem; font-weight: 700; letter-spacing: .12em; color: #9ab; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
-      .exp-item { margin-bottom: 1.8rem; padding-left: 1rem; border-left: 3px solid #4488cc; }
-      .exp-item h3 { font-size: 1rem; color: #ffffff; margin-bottom: 0.2rem; }
-      .exp-item .meta { font-size: 0.8rem; color: #7799aa; margin-bottom: 0.8rem; }
-      .exp-item ul { padding-left: 1.2rem; }
-      .exp-item ul li { font-size: 0.9rem; color: #ccd; margin-bottom: 0.4rem; line-height: 1.6; }
-      .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-      .skill-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem; }
-      .skill-box h4 { font-size: 0.8rem; color: #7eb8f7; margin-bottom: 0.6rem; letter-spacing: .05em; }
-      .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-      .skill-tag { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 3px 10px; font-size: 0.75rem; color: #ccd; }
-      .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-      .cert-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 0.8rem 1rem; display: flex; align-items: flex-start; gap: 0.6rem; }
-      .cert-dot { width: 8px; height: 8px; border-radius: 50%; background: #4488cc; flex-shrink: 0; margin-top: 4px; }
-      .cert-name { font-size: 0.85rem; color: #dde; line-height: 1.4; }
-      .cert-inprog { display: inline-block; font-size: 0.7rem; background: rgba(255,180,0,0.15); color: #ffbb44; border-radius: 8px; padding: 1px 7px; margin-top: 3px; }
-      .competency-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
-      .comp-tag { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 0.8rem; padding: 4px 12px; color: #bbc; }
-      .edu-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid #44bb88; border-radius: 8px; padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; }
-      .edu-card h3 { font-size: 1rem; color: #fff; margin-bottom: 4px; }
-      .edu-card p { font-size: 0.85rem; color: #99aaaa; }
+      .resume-section .sec-heading { font-size: 0.78rem; font-weight: 700; letter-spacing: .14em; color: #38bdf8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.5rem; margin-bottom: 1.4rem; }
+
+      .resume-section p { font-size: 0.95rem; color: #f1f5f9; line-height: 1.75; }
+
+      .edu-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-left: 4px solid #44bb88; border-radius: 8px; padding: 1.1rem 1.3rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; }
+      .edu-card h3 { font-size: 1.05rem; color: #ffffff; margin-bottom: 5px; font-weight: 600; }
+      .edu-card p { font-size: 0.88rem; color: #e2e8f0; margin: 0; }
       .edu-badges { display: flex; flex-direction: column; gap: 5px; align-items: flex-end; }
-      .edu-badge { background: rgba(255,215,0,0.12); border: 1px solid rgba(255,215,0,0.25); border-radius: 12px; padding: 3px 10px; font-size: 0.75rem; color: #ffd700; }
-      @media (max-width: 600px) { .skills-grid, .cert-grid { grid-template-columns: 1fr; } }
+      .edu-badge { background: rgba(255,215,0,0.15); border: 1px solid rgba(255,215,0,0.3); border-radius: 12px; padding: 3px 12px; font-size: 0.75rem; color: #ffd700; font-weight: 600; }
+
+      .exp-item { margin-bottom: 1.8rem; padding-left: 1.1rem; border-left: 4px solid #4488cc; }
+      .exp-item h3 { font-size: 1rem; color: #ffffff; margin-bottom: 3px; font-weight: 600; }
+      .exp-item .meta { font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.8rem; }
+      .exp-item ul { padding-left: 1.2rem; margin: 0; }
+      .exp-item ul li { font-size: 0.92rem; color: #f8fafc; margin-bottom: 0.45rem; line-height: 1.65; }
+
+      .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .skill-box { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem 1.1rem; }
+      .skill-box h4 { font-size: 0.82rem; color: #7eb8f7; margin-bottom: 0.7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+      .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+      .skill-tag { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 3px 11px; font-size: 0.78rem; color: #f8fafc; }
+
+      .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+      .cert-item { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.85rem 1rem; display: flex; align-items: flex-start; gap: 0.7rem; }
+      .cert-dot { width: 9px; height: 9px; border-radius: 50%; background: #4488cc; flex-shrink: 0; margin-top: 4px; }
+      .cert-name { font-size: 0.88rem; color: #f1f5f9; line-height: 1.45; font-weight: 500; }
+      .cert-inprog { display: inline-block; font-size: 0.72rem; background: rgba(255,180,0,0.18); color: #ffcc55; border: 1px solid rgba(255,180,0,0.3); border-radius: 8px; padding: 1px 8px; margin-top: 4px; font-weight: 600; }
+
+      .competency-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+      .comp-tag { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 6px; font-size: 0.82rem; padding: 5px 13px; color: #f8fafc; }
+
+      @media (max-width: 600px) {
+        .skills-grid, .cert-grid { grid-template-columns: 1fr; }
+        .resume-hero h1 { font-size: 1.6rem; }
+        .edu-card { flex-direction: column; }
+        .edu-badges { align-items: flex-start; }
+      }
     </style>
   </head>
   <body class="is-preload">
@@ -61,183 +81,217 @@
       </nav>
 
       <div id="main">
-        <article class="post featured" style="padding:0;background:none;border:none;">
+        <article class="post featured" style="padding:0; background:none; border:none; box-shadow:none;">
+          <div class="resume-wrap">
 
-          <!-- Hero -->
-          <div class="resume-hero">
-            <h1>Daniel Nicholas Warri</h1>
-            <p>Software Engineer &amp; IT Project Coordinator</p>
-            <div class="contact-bar">
-              <span>&#9993; <a href="mailto:danielnicholaswarri22@gmail.com">danielnicholaswarri22@gmail.com</a></span>
-              <span>&#9742; 270-572-0627</span>
-              <span>&#9742; 848-458-0033</span>
-              <span>&#127760; Campbellsville, KY</span>
-              <span><a href="https://www.linkedin.com/in/danielwarri" target="_blank">LinkedIn</a></span>
-              <span><a href="https://github.com/dnwarri01/Portfolio" target="_blank">GitHub</a></span>
-            </div>
-            <div class="awards">
-              <span class="award-badge">GPA 4.0</span>
-              <span class="award-badge">Dean's List &times;5</span>
-              <span class="award-badge">President's List &times;3</span>
-              <span class="award-badge">Academic Scholarship</span>
-            </div>
-          </div>
-
-          <!-- Career Objective -->
-          <div class="resume-section">
-            <h2>Career Objective</h2>
-            <p>Driven and detail-oriented Computer Science graduate with hands-on experience in systems engineering, web development, cybersecurity, project management, and IT support. Eager to apply technical expertise and analytical mindset to help an innovative organisation build scalable solutions, strengthen system performance, and advance cloud and automation initiatives while continuing to grow as an IT professional.</p>
-          </div>
-
-          <!-- Education -->
-          <div class="resume-section">
-            <h2>Education</h2>
-            <div class="edu-card">
-              <div>
-                <h3>Campbellsville University</h3>
-                <p>Bachelor of Science, Computer Science &nbsp;|&nbsp; Minor: Engineering</p>
-                <p style="margin-top:4px;font-size:0.8rem;color:#667788">Campbellsville, Kentucky</p>
+            <!-- ── Hero ── -->
+            <div class="resume-hero">
+              <h1>Daniel Nicholas Warri</h1>
+              <p class="subtitle">Software Engineer &amp; IT Project Coordinator</p>
+              <div class="contact-bar">
+                <span>&#9993;&nbsp;<a href="mailto:danielnicholaswarri22@gmail.com">danielnicholaswarri22@gmail.com</a></span>
+                <span>&#9742;&nbsp;270-572-0627</span>
+                <span>&#9742;&nbsp;848-458-0033</span>
+                <span>&#127760;&nbsp;Campbellsville, KY</span>
+                <span><a href="https://www.linkedin.com/in/danielwarri" target="_blank">LinkedIn</a></span>
+                <span><a href="https://github.com/dnwarri01/Portfolio" target="_blank">GitHub</a></span>
               </div>
-              <div class="edu-badges">
-                <span class="edu-badge">GPA 4.0</span>
-                <span class="edu-badge">Academic Scholarship</span>
+              <div class="awards">
+                <span class="award-badge">GPA 4.0</span>
+                <span class="award-badge">Dean's List &times;5</span>
+                <span class="award-badge">President's List &times;3</span>
+                <span class="award-badge">Academic Scholarship</span>
               </div>
             </div>
-          </div>
 
-          <!-- Experience -->
-          <div class="resume-section">
-            <h2>Experience</h2>
-
-            <div class="exp-item">
-              <h3>IT Support / Systems Engineer &mdash; Hopefield Healthcare Services</h3>
-              <div class="meta">Tennessee, USA &nbsp;|&nbsp; Apprenticeship &amp; Internship &nbsp;|&nbsp; Jul 2019 &ndash; Jan 2023</div>
-              <ul>
-                <li>Designed and maintained responsive web pages using HTML and CSS, improving site usability and aesthetics.</li>
-                <li>Collaborated with developers and administrative teams to optimise system performance and reduce downtime.</li>
-                <li>Supported network and IT infrastructure maintenance, enhancing system reliability and data security.</li>
-                <li>Implemented data-protection measures aligned with healthcare compliance standards and developed troubleshooting workflows.</li>
-              </ul>
+            <!-- ── Career Objective ── -->
+            <div class="resume-section">
+              <div class="sec-heading">Career Objective</div>
+              <p>Driven and detail-oriented Computer Science graduate with hands-on experience in systems engineering, web development, cybersecurity, project management, and IT support. Eager to apply technical expertise and analytical mindset to help an innovative organisation build scalable solutions, strengthen system performance, and advance cloud and automation initiatives while continuing to grow as an IT professional.</p>
             </div>
 
-            <div class="exp-item">
-              <h3>Permit Coordinator &mdash; RLF Consulting</h3>
-              <div class="meta">Arizona, USA &nbsp;|&nbsp; Internship &nbsp;|&nbsp; May 2024 &ndash; Aug 2024</div>
-              <ul>
-                <li>Coordinated permitting processes with municipalities, ensuring timely submission and approval of construction and renovation documents.</li>
-                <li>Managed project timelines and communicated status updates between city departments, clients, architects, and engineers.</li>
-                <li>Tracked and maintained accurate records of permits, approvals, and documentation to meet project milestones.</li>
-                <li>Supported project managers with status reports, deliverable tracking, and operational efficiency across multiple projects.</li>
-              </ul>
-            </div>
-
-            <div class="exp-item">
-              <h3>Front Desk Clerk / Floor Manager &mdash; Campbellsville University Wellness Center</h3>
-              <div class="meta">Kentucky, USA &nbsp;|&nbsp; Jul 2021 &ndash; May 2025</div>
-              <ul>
-                <li>Managed scheduling and resource coordination, improving operational efficiency.</li>
-                <li>Ensured adherence to safety and cleanliness standards, increasing user satisfaction metrics.</li>
-                <li>Built communication and problem-solving skills through daily student and staff interactions.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Technical Skills -->
-          <div class="resume-section">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-              <div class="skill-box">
-                <h4>Programming &amp; Scripting</h4>
-                <div class="skill-tags">
-                  <span class="skill-tag">Python</span><span class="skill-tag">C++</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Bash</span>
+            <!-- ── Education ── -->
+            <div class="resume-section">
+              <div class="sec-heading">Education</div>
+              <div class="edu-card">
+                <div>
+                  <h3>Campbellsville University</h3>
+                  <p>Bachelor of Science, Computer Science &nbsp;|&nbsp; Minor: Engineering</p>
+                  <p style="margin-top:5px; font-size:0.8rem; color:#cbd5e1;">Campbellsville, Kentucky</p>
                 </div>
-              </div>
-              <div class="skill-box">
-                <h4>Tools &amp; Platforms</h4>
-                <div class="skill-tags">
-                  <span class="skill-tag">GitHub</span><span class="skill-tag">VS Code</span><span class="skill-tag">Microsoft 365</span><span class="skill-tag">Active Directory</span><span class="skill-tag">Tableau</span><span class="skill-tag">React</span><span class="skill-tag">Canva</span><span class="skill-tag">ITSM Tools</span>
-                </div>
-              </div>
-              <div class="skill-box">
-                <h4>Automation &amp; AI</h4>
-                <div class="skill-tags">
-                  <span class="skill-tag">Python scripting</span><span class="skill-tag">Workflow optimisation</span><span class="skill-tag">ChatGPT</span><span class="skill-tag">GitHub Copilot</span>
-                </div>
-              </div>
-              <div class="skill-box">
-                <h4>Concepts &amp; Soft Skills</h4>
-                <div class="skill-tags">
-                  <span class="skill-tag">Networking</span><span class="skill-tag">Cybersecurity</span><span class="skill-tag">Project Management</span><span class="skill-tag">System Administration</span><span class="skill-tag">French (conversational)</span>
+                <div class="edu-badges">
+                  <span class="edu-badge">GPA 4.0</span>
+                  <span class="edu-badge">Academic Scholarship</span>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Certifications -->
-          <div class="resume-section">
-            <h2>Certifications</h2>
-            <div class="cert-grid">
-              <div class="cert-item">
-                <div class="cert-dot"></div>
-                <div><div class="cert-name">Microsoft Azure Fundamentals (AZ-900)</div><span class="cert-inprog">In Progress</span></div>
+            <!-- ── Experience ── -->
+            <div class="resume-section">
+              <div class="sec-heading">Experience</div>
+
+              <div class="exp-item">
+                <h3>IT Support / Systems Engineer &mdash; Hopefield Healthcare Services</h3>
+                <div class="meta">Tennessee, USA &nbsp;|&nbsp; Apprenticeship &amp; Internship &nbsp;|&nbsp; Jul 2019 &ndash; Jan 2023</div>
+                <ul>
+                  <li>Designed and maintained responsive web pages using HTML and CSS, improving site usability and aesthetics.</li>
+                  <li>Collaborated with developers and administrative teams to optimise system performance and reduce downtime.</li>
+                  <li>Supported network and IT infrastructure maintenance, enhancing system reliability and data security.</li>
+                  <li>Implemented data-protection measures aligned with healthcare compliance standards and developed troubleshooting workflows.</li>
+                </ul>
               </div>
-              <div class="cert-item">
-                <div class="cert-dot"></div>
-                <div><div class="cert-name">CompTIA A+ Certification</div></div>
+
+              <div class="exp-item">
+                <h3>Permit Coordinator &mdash; RLF Consulting</h3>
+                <div class="meta">Arizona, USA &nbsp;|&nbsp; Internship &nbsp;|&nbsp; May 2024 &ndash; Aug 2024</div>
+                <ul>
+                  <li>Coordinated permitting processes with municipalities, ensuring timely submission and approval of construction and renovation documents.</li>
+                  <li>Managed project timelines and communicated status updates between city departments, clients, architects, and engineers.</li>
+                  <li>Tracked and maintained accurate records of permits, approvals, and documentation to meet project milestones.</li>
+                  <li>Supported project managers with status reports, deliverable tracking, and operational efficiency across multiple projects.</li>
+                </ul>
               </div>
-              <div class="cert-item">
-                <div class="cert-dot"></div>
-                <div><div class="cert-name">Google IT Support Professional Certificate</div></div>
-              </div>
-              <div class="cert-item">
-                <div class="cert-dot"></div>
-                <div><div class="cert-name">Generative AI Fundamentals &mdash; Google Cloud</div></div>
-              </div>
-              <div class="cert-item">
-                <div class="cert-dot"></div>
-                <div><div class="cert-name">Automation Anywhere RPA Citizen Developer Foundation</div></div>
-              </div>
-              <div class="cert-item">
-                <div class="cert-dot"></div>
-                <div><div class="cert-name">Google Project Management Certificate</div></div>
+
+              <div class="exp-item">
+                <h3>Front Desk Clerk / Floor Manager &mdash; Campbellsville University Wellness Center</h3>
+                <div class="meta">Kentucky, USA &nbsp;|&nbsp; Jul 2021 &ndash; May 2025</div>
+                <ul>
+                  <li>Managed scheduling and resource coordination, improving operational efficiency.</li>
+                  <li>Ensured adherence to safety and cleanliness standards, increasing user satisfaction metrics.</li>
+                  <li>Built communication and problem-solving skills through daily student and staff interactions.</li>
+                </ul>
               </div>
             </div>
-          </div>
 
-          <!-- Core Competencies -->
-          <div class="resume-section">
-            <h2>Core Competencies</h2>
-            <div class="competency-wrap">
-              <span class="comp-tag">Systems Engineering</span>
-              <span class="comp-tag">Software Development</span>
-              <span class="comp-tag">IT Infrastructure</span>
-              <span class="comp-tag">Cloud Computing (Azure)</span>
-              <span class="comp-tag">Cybersecurity Fundamentals</span>
-              <span class="comp-tag">Network Administration</span>
-              <span class="comp-tag">Automation &amp; Scripting</span>
-              <span class="comp-tag">Data Analysis</span>
-              <span class="comp-tag">Web Development</span>
-              <span class="comp-tag">Technical Support</span>
-              <span class="comp-tag">System Optimisation</span>
-              <span class="comp-tag">DevOps Practices</span>
-              <span class="comp-tag">Database Management</span>
-              <span class="comp-tag">API Integration</span>
-              <span class="comp-tag">Agile Methodologies</span>
-              <span class="comp-tag">Project Management</span>
-              <span class="comp-tag">Technical Documentation</span>
-              <span class="comp-tag">UI/UX Collaboration</span>
-              <span class="comp-tag">Cross-Functional Teamwork</span>
+            <!-- ── Technical Skills ── -->
+            <div class="resume-section">
+              <div class="sec-heading">Technical Skills</div>
+              <div class="skills-grid">
+                <div class="skill-box">
+                  <h4>Programming &amp; Scripting</h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Bash</span>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <h4>Tools &amp; Platforms</h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Microsoft 365</span>
+                    <span class="skill-tag">Active Directory</span>
+                    <span class="skill-tag">Tableau</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">ITSM Tools</span>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <h4>Automation &amp; AI</h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Python scripting</span>
+                    <span class="skill-tag">Workflow optimisation</span>
+                    <span class="skill-tag">ChatGPT</span>
+                    <span class="skill-tag">GitHub Copilot</span>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <h4>Concepts &amp; Soft Skills</h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Networking</span>
+                    <span class="skill-tag">Cybersecurity</span>
+                    <span class="skill-tag">Project Management</span>
+                    <span class="skill-tag">System Administration</span>
+                    <span class="skill-tag">French (conversational)</span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
+            <!-- ── Certifications ── -->
+            <div class="resume-section">
+              <div class="sec-heading">Certifications</div>
+              <div class="cert-grid">
+                <div class="cert-item">
+                  <div class="cert-dot"></div>
+                  <div>
+                    <div class="cert-name">Microsoft Azure Fundamentals (AZ-900)</div>
+                    <span class="cert-inprog">In Progress</span>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-dot"></div>
+                  <div><div class="cert-name">CompTIA A+ Certification</div></div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-dot"></div>
+                  <div><div class="cert-name">Google IT Support Professional Certificate</div></div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-dot"></div>
+                  <div><div class="cert-name">Generative AI Fundamentals &mdash; Google Cloud</div></div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-dot"></div>
+                  <div><div class="cert-name">Automation Anywhere RPA Citizen Developer Foundation</div></div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-dot"></div>
+                  <div><div class="cert-name">Google Project Management Certificate</div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── Core Competencies ── -->
+            <div class="resume-section">
+              <div class="sec-heading">Core Competencies</div>
+              <div class="competency-wrap">
+                <span class="comp-tag">Systems Engineering</span>
+                <span class="comp-tag">Software Development</span>
+                <span class="comp-tag">IT Infrastructure</span>
+                <span class="comp-tag">Cloud Computing (Azure)</span>
+                <span class="comp-tag">Cybersecurity Fundamentals</span>
+                <span class="comp-tag">Network Administration</span>
+                <span class="comp-tag">Automation &amp; Scripting</span>
+                <span class="comp-tag">Data Analysis</span>
+                <span class="comp-tag">Web Development</span>
+                <span class="comp-tag">Technical Support</span>
+                <span class="comp-tag">System Optimisation</span>
+                <span class="comp-tag">DevOps Practices</span>
+                <span class="comp-tag">Database Management</span>
+                <span class="comp-tag">API Integration</span>
+                <span class="comp-tag">Agile Methodologies</span>
+                <span class="comp-tag">Project Management</span>
+                <span class="comp-tag">Technical Documentation</span>
+                <span class="comp-tag">UI/UX Collaboration</span>
+                <span class="comp-tag">Cross-Functional Teamwork</span>
+              </div>
+            </div>
+
+          </div>
         </article>
       </div>
 
+      <!-- ── Footer ── -->
       <footer id="footer">
         <section class="split contact">
-          <section class="alt"><h3>Location</h3><p>Campbellsville, KY 42718</p></section>
-          <section><h3>Phone</h3><p>270-572-0627</p></section>
-          <section><h3>Email</h3><p><a href="mailto:danielnicholaswarri22@gmail.com">danielnicholaswarri22@gmail.com</a></p></section>
+          <section class="alt">
+            <h3>Location</h3>
+            <p>Campbellsville, KY 42718</p>
+          </section>
+          <section>
+            <h3>Phone</h3>
+            <p>270-572-0627</p>
+          </section>
+          <section>
+            <h3>Email</h3>
+            <p><a href="mailto:danielnicholaswarri22@gmail.com">danielnicholaswarri22@gmail.com</a></p>
+          </section>
           <section>
             <h3>Social</h3>
             <ul class="icons alt">
@@ -249,10 +303,14 @@
       </footer>
 
       <div id="copyright">
-        <ul><li>&copy; Daniel Nicholas Warri</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        <ul>
+          <li>&copy; Daniel Nicholas Warri</li>
+          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+        </ul>
       </div>
 
     </div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
